@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedro Henrique Viudes - Currículo Profissional</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #1540ff 0%, #148bfa 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .poster-container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            overflow: hidden;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            border: 4px solid white;
+            overflow: hidden;
+        }
+        
+        .name {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .title {
+            font-size: 1.2rem;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .content {
+            padding: 40px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #3498db;
+        }
+        
+        .experience-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .company {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        
+        .period {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        
+        .skill-category {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .skill-title {
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+        
+        .skill-list {
+            list-style: none;
+        }
+        
+        .skill-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .soft-skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .soft-skill {
+            background: #3498db;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        
+        .footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+        }
+        
+        
+        @media (max-width: 1024px) {
+            .content {
+                gap: 30px;
+                padding: 30px;
+            }
+            
+            .header {
+                padding: 30px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .content {
+                grid-template-columns: 1fr;
+                padding: 25px;
+            }
+            
+            .header {
+                padding: 25px 20px;
+            }
+            
+            .name {
+                font-size: 2rem;
+            }
+            
+            .contact-info {
+                gap: 15px;
+                padding: 15px;
+            }
+            
+            .contact-item {
+                justify-content: center;
+                width: 100%;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .soft-skills {
+                justify-content: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .poster-container {
+                margin: 10px;
+                border-radius: 15px;
+            }
+            
+            .header {
+                padding: 20px 15px;
+            }
+            
+            .profile-image {
+                width: 120px;
+                height: 120px;
+            }
+            
+            .name {
+                font-size: 1.8rem;
+            }
+            
+            .title {
+                font-size: 1rem;
+            }
+            
+            .content {
+                padding: 20px 15px;
+            }
+            
+            .section-title {
+                font-size: 1.3rem;
+            }
+            
+            .contact-item {
+                flex-direction: column;
+                text-align: center;
+                gap: 5px;
+            }
+            
+            .experience-item {
+                padding: 12px;
+            }
+        }
+        
+       
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-fade-in {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+    </style>
+</head>
+<body>
+    <div class="poster-container">
+        <div class="header">
+            <div class="profile-image">
+                <img src="/img/imgph.jpg" onerror="this.style.display='none'" />
+            </div>
+            <h1 class="name">PEDRO HENRIQUE VIUDES</h1>
+            <p class="title">Desenvolvedor Web • Designer • Especialista em TI</p>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span>📍</span>
+                    <span>Avenida Antônio Gentil N°1761, Anita Moreira - Jacarezinho PR</span>
+                </div>
+                <div class="contact-item">
+                    <span>📧</span>
+                    <span><a href="mailto:pedrohenriqueviudes@gmail.com">pedrohenriqueviudes@gmail.com</a></span>
+                </div>
+                <div class="contact-item">
+                    <span>📱</span>
+                    <span><a href="https://wa.me/5543984120051">43 98412-0051</a></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="left-column">
+                <div class="section animate-fade-in" style="animation-delay: 0.1s">
+                    <h2 class="section-title">EXPERIÊNCIA PROFISSIONAL</h2>
+                    
+                    <div class="experience-item">
+                        <h3 class="company">Auge Mídias (2021-2023)</h3>
+                        <p class="period">Desenvolvedor Web & Designer</p>
+                        <p>Desenvolvimento de websites institucionais e cartões de visita digitais, utilizando tecnologias front-end para criar interfaces responsivas e implementando estratégias de marketing digital.</p>
+                    </div>
+
+                    <div class="experience-item">
+                        <h3 class="company">Uninter (2022-2023)</h3>
+                        <p class="period">Atendimento & Mídias Sociais</p>
+                        <p>Atendimento ao público, criação de conteúdo visual e gerenciamento de redes sociais para engajamento do público educacional.</p>
+                    </div>
+
+                    <div class="experience-item">
+                        <h3 class="company">UENP (2021-2023)</h3>
+                        <p class="period">Suporte Técnico - NTI</p>
+                        <p>Prestação de suporte técnico para comunidade de 600+ usuários, manutenção de equipamentos e infraestrutura de redes, diagnóstico e solução de problemas de hardware/software.</p>
+                    </div>
+
+                    <div class="experience-item">
+                        <h3 class="company">Criativa - Comunicação Visual (2023)</h3>
+                        <p class="period">Designer Gráfico</p>
+                        <p>Criação de artes e materiais gráficos alinhados com identidade visual, atendimento ao cliente e levantamento de requisitos para projetos de design.</p>
+                    </div>
+
+                    <div class="experience-item">
+                        <h3 class="company">Dr Sell Informática (2024)</h3>
+                        <p class="period">Técnico & Marketing</p>
+                        <p>Reparos em dispositivos móveis, gerenciamento de marketing e atendimento direto ao público.</p>
+                    </div>
+
+                    <div class="experience-item">
+                        <h3 class="company">Deusege LTDA (2024-2025)</h3>
+                        <p class="period">Analista de Dados & Suporte</p>
+                        <p>Análise de dados educacionais com Power BI, suporte técnico à infraestrutura de redes de 16 escolas.</p>
+                    </div>
+
+                    <div class="experience-item">
+                        <h3 class="company">UENP - Agente Universitário</h3>
+                        <p class="period">Especialista em TI</p>
+                        <p>Suporte técnico especializado, manutenção e configuração de infraestrutura de redes e servidores.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-column">
+                <div class="section animate-fade-in" style="animation-delay: 0.2s">
+                    <h2 class="section-title">COMPETÊNCIAS TÉCNICAS</h2>
+                    <div class="skills-grid">
+                        <div class="skill-category">
+                            <h3 class="skill-title">Desenvolvimento Web</h3>
+                            <ul class="skill-list">
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                                <li>Python</li>
+                            </ul>
+                        </div>
+
+                        <div class="skill-category">
+                            <h3 class="skill-title">Design</h3>
+                            <ul class="skill-list">
+                                <li>Adobe Photoshop</li>
+                                <li>Adobe Illustrator</li>
+                                <li>Figma</li>
+                            </ul>
+                        </div>
+
+                        <div class="skill-category">
+                            <h3 class="skill-title">Análise de Dados</h3>
+                            <ul class="skill-list">
+                                <li>Microsoft Power BI</li>
+                                <li>Excel Avançado</li>
+                            </ul>
+                        </div>
+
+                        <div class="skill-category">
+                            <h3 class="skill-title">Redes & Infraestrutura</h3>
+                            <ul class="skill-list">
+                                <li>TCP/IP</li>
+                                <li>Windows Server</li>
+                                <li>Linux</li>
+                                <li>Hardware</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section animate-fade-in" style="animation-delay: 0.3s">
+                    <h2 class="section-title">COMPETÊNCIAS INTERPESSOAIS</h2>
+                    <div class="soft-skills">
+                        <span class="soft-skill">Comunicação Clara</span>
+                        <span class="soft-skill">Trabalho em Equipe</span>
+                        <span class="soft-skill">Resolução de Problemas</span>
+                        <span class="soft-skill">Proatividade</span>
+                        <span class="soft-skill">Gestão de Tempo</span>
+                        <span class="soft-skill">Colaboração</span>
+                        <span class="soft-skill">Iniciativa</span>
+                    </div>
+                </div>
+
+                <div class="section animate-fade-in" style="animation-delay: 0.4s">
+                    <h2 class="section-title">FORMAÇÃO ACADÊMICA</h2>
+                    <div class="experience-item">
+                        <h3 class="company">Colegio Estadual Luiz Setti</h3>
+                        <p class="period">Tecnologia da Informação</p>
+                        <p>Formação técnica e desenvolvimento de interfaces web</p>
+                    </div>
+                    <div class="experience-item">
+                        <h3 class="company">Instituto Federal do Paraná</h3>
+                        <p class="period">Sistemas para Internet </p>
+                        <p>Curso superior em andamento, sobre sistema para internet, conceitos e especialização</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Disponível para oportunidades profissionais</p>
+        </div>
+    </div>
+
+    <script>
+      
+        document.addEventListener('DOMContentLoaded', function() {
+            const animatedElements = document.querySelectorAll('.animate-fade-in');
+            
+            animatedElements.forEach((element, index) => {
+                element.style.opacity = '0';
+                setTimeout(() => {
+                    element.style.animation = `fadeInUp 0.6s ease-out ${index * 0.1}s forwards`;
+                }, 100);
+            });
+            
+            
+            const experienceItems = document.querySelectorAll('.experience-item');
+            experienceItems.forEach(item => {
+                item.addEventListener('mouseenter', () => {
+                    item.style.transform = 'translateY(-5px)';
+                    item.style.boxShadow = '0 10px 25px -5px rgba(0, 0, 0, 0.1)';
+                    item.style.transition = 'all 0.3s ease';
+                });
+                
+                item.addEventListener('mouseleave', () => {
+                    item.style.transform = 'translateY(0)';
+                    item.style.boxShadow = 'none';
+                });
+            });
+            
+           
+            function handleResize() {
+                const poster = document.querySelector('.poster-container');
+                if (window.innerWidth < 768) {
+                    poster.style.margin = '10px';
+                } else {
+                    poster.style.margin = '0 auto';
+                }
+            }
+            
+            window.addEventListener('resize', handleResize);
+            handleResize(); 
+        });
+    </script>
+</body>
+</html>
+
